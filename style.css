@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Cookie&family=Poppins:ital,wght@0,400;0,600;1,100&display=swap');
+:root {
+    --main-bg-color:#0A090C ;
+    --secod-color:#EABE3F;
+    --font-color:#ffffff;
+    --hover-color:#222125;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+    color:var(--font-color);
+    font-family: 'Comfortaa', cursive;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.logo-box{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+.content{
+    width: 90vw;
+}
+
+.nav-mob{
+    height: 0;
+    visibility: hidden;
+}
+.nav-mob.active {
+    height: max-content;
+    visibility: visible;
+}
+.fa-bars{
+    font-size: 3em;
+    color: var(--font-color);
+    position: absolute;
+    top: 30px;
+    right: 0;
+
+}
+ul{
+    width: 100%;
+    list-style: none;
+    font-size: 1.8rem;
+}
+li{
+    width: 100%;
+    height: max-content;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+   
+}
+li a{
+    color: var(--font-color);
+
+}
+.nav-items > li:hover{
+    background-color: var(--hover-color);
+}
+.banner-box{
+    height: 30vh;
+    background-image: url(./assets/cake-conejo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.grilla-box{
+    display: flex;
+    flex-direction: column;
+    gap: 3em; /*Espacio entre los elementos de la columna*/
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem ;
+}
+.chocolate-box{
+    background-image: url(./assets/cake-chocolate.jpg);
+    width: 20px;
+    height: 100px;
+}
+.section-padding{
+    padding: 2rem 2rem;
+  }
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap:10rem;
+}
+.items header{
+    grid-column:span 12;/*Para que ocupe las 12 columnas*/
+}
+.items{
+    gap:1rem;
+}
+.items .item{
+    grid-column: span 12;
+}
+.item .background{
+    width: 100%;
+    padding-bottom: 56%;
+    background-position: center;
+    background-size: cover;
+}
+.item header{
+    padding: 1.5em 2em;
+}
+#logo{
+    font-family: 'Cookie', cursive;
+    font-size: 4em;
+    color: var(--secod-color);
+
+}
+.subtitulo{
+    color: var(--secod-color);
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+.second-grid{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.items-footer header{
+    grid-column:span 12;/*Para que ocupe las 12 columnas*/
+}
+
+.items-footer .item{
+    grid-column: span 12;
+    border: 1px solid var(--secod-color);
+}
+.title-box{
+   color: var(--secod-color); 
+}
+form{
+    width: 90%;
+    height: max-content;
+    border-radius: 24px;
+    background-color: var(--hover-color);
+    padding: 2rem ;
+}
+.form-control{
+    position: relative;
+    margin:30px 0 40px;
+    width:100%;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--font-color);
+    padding-top:25px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+}
+.form-control input:focus, .form-control input:valid{
+    outline: 0;
+}
+.form-control label{
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.form-select{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+#area-text{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.btn{
+    cursor: pointer;
+    color:var(--font-color);
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--secod-color);
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.table{
+    width: 90%;
+    border-spacing: 0;
+    background-color: #564d66;
+   
+}
+.table td{
+    color: var(--main-bg-color);
+
+}
+
+.table td, .table th{
+
+    text-align: left;
+    padding: 1em;
+}
+
+.table tr:nth-child(even){
+   background-color: #D0C6D2;
+}
+.title-pastel{
+  margin: 30px;
+  color: var(--secod-color);
+  font-size: 1em;
+}
+
+@media (min-width: 60rem){
+    #logo{
+        font-size: 5em;    
+    }
+
+    .nav-mob{
+        height: 10vh; 
+        padding-top: 30px;
+        margin-bottom: 2rem;
+        visibility: visible;
+    }
+    ul{
+        display:flex;
+        width: 100%;
+        justify-items: center;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 1rem;
+    }
+    li{
+        width: 100%;
+        text-align: center;
+        padding-top:1rem ;
+        padding-bottom:1rem ;
+    }
+    .banner-box{
+        height: 60vh;
+    }
+    .fa-bars{
+        visibility: hidden;
+    }
+    .grilla-box{
+        flex-direction: row;
+        align-items: stretch; 
+        gap: 6em;
+        justify-items: start;
+    
+    }
+    .title-box{
+        width: 600px;
+    }
+    .paragraph-box{
+        text-align: left;
+    }
+    .items .item{
+        grid-column: span 3;
+      }
+      .subtitulo{
+        font-size: 1rem;
+        text-align: center;
+    }
+    form{
+        width: 50%;
+        height: max-content;
+        border-radius: 24px;
+        background-color: var(--hover-color);
+        padding: 2rem ;
+    }
+    .items-footer .item{
+        grid-column: span 4;
+      }
+    
+}
+
